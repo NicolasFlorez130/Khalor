@@ -1,0 +1,608 @@
+main {
+    .about {
+        display: flex;
+        font-size: 1.7em;
+        justify-content: center;
+        margin: 110px 30px;
+
+
+        div {
+            display: flex;
+            justify-content: center;
+            max-width: $maxWidth;
+
+            p {
+                width: 50%;
+                text-align: center;
+
+                @include phone {
+                    width: 100%;
+                }
+
+                .title {
+                    font-weight: 800;
+                }
+
+                .desc {
+                    color: $secColor;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    .cards {
+        margin: 120px 30px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+
+            max-width: $maxWidth;
+
+            @include tablet {
+                justify-content: space-evenly;
+            }
+
+            .card {
+                border-radius: 2px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+                display: flex;
+                margin-bottom: 20px;
+                width: 32%;
+
+                justify-content: center;
+
+                @include tablet {
+                    width: 45%;
+                }
+
+                @include phone {
+                    width: 100%;
+                }
+
+                &:hover .icon {
+                    color: $thirdColor;
+                }
+
+                div {
+
+                    display: flex;
+                    flex-direction: column;
+                    margin: 60px 0;
+                    width: 80%;
+
+                    .icon {
+                        color: $thirdColorLight;
+                        font-size: 3rem;
+                        margin: 0;
+                        width: 20%;
+
+                        max-width: 60px;
+                        transition: 0.2s;
+                    }
+
+                    h3 {
+                        margin: 20px 0;
+                    }
+
+                    p {
+                        color: $secColor;
+                        font-family: 'IBM Plex Mono', monospace;
+                        font-weight: 300;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .counter {
+        display: flex;
+        justify-content: center;
+        margin: 0 30px;
+
+        @include tablet {
+            margin: 0;
+        }
+
+        span {
+            align-items: flex-end;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            height: 720px;
+            justify-content: center;
+            width: 100%;
+
+            max-width: 1500px;
+            transition: 0.2s;
+
+            @include phone {
+                height: 100vw;
+            }
+
+            i {
+                color: $secColor;
+                cursor: pointer;
+                font-size: 0.5em;
+                padding: 0 5px 10px;
+
+                transition: 0.5s;
+            }
+        }
+    }
+
+    .carousel {
+        display: flex;
+        justify-content: center;
+        margin: 0 30px;
+        margin-top: 100px;
+        width: auto;
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(($cardSize + 4vw) * -$imagesCuant);
+
+            }
+
+        }
+
+        @include tablet {
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(($cardSizeTablet + 4vw) * -$imagesCuant);
+
+                }
+
+            }
+        }
+
+        @include phone {
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(($cardSizePhone + 4vw) * -$imagesCuant);
+
+                }
+
+            }
+        }
+
+        @include ultraWide {
+            @keyframes scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(($cardSizeUW + 4vw) * -$imagesCuant);
+
+                }
+
+            }
+        }
+
+        .cont {
+            max-width: 1500px;
+            overflow: hidden;
+
+            p {
+                color: $secColor;
+                font-weight: 300;
+                text-align: center;
+            }
+
+
+            .title {
+                text-align: center;
+                font-size: 2rem;
+                font-weight: 800;
+            }
+
+            p,
+            .title {
+                margin: 0 30px;
+            }
+
+            .corouselContainer {
+                animation: scroll 14s linear infinite;
+                color: #edf2f4;
+                display: flex;
+                width: max-content;
+
+                &:hover {
+                    animation-play-state: paused;
+                }
+
+                .item {
+                    box-shadow: 0 5px 15px #00000014;
+                    display: flex;
+                    height: $cardSize;
+                    overflow: hidden;
+                    margin: 50px 2vw;
+                    position: relative;
+                    width: $cardSize;
+
+                    transition: .5s;
+
+                    @include tablet {
+                        height: $cardSizeTablet;
+                        width: $cardSizeTablet;
+                    }
+
+                    @include phone {
+                        height: $cardSizePhone;
+                        width: $cardSizePhone;
+                    }
+
+                    @include ultraWide {
+                        height: $cardSizeUW;
+                        width: $cardSizeUW;
+                    }
+
+                    &:hover {
+                        width: $cardSize * 2;
+
+                        @include tablet {
+                            width: $cardSizeTablet * 2;
+                        }
+
+                        @include ultraWide {
+                            width: $cardSizeUW * 2;
+                        }
+
+                        @include phone {
+                            height: $cardSizePhone * 2;
+                            width: $cardSizePhone;
+                        }
+
+                        & .details {
+                            position: absolute;
+                        }
+                    }
+
+                    .image {
+                        box-shadow: 0 5px 15px #00000014;
+
+                        align-items: center;
+                        display: flex;
+                        height: $cardSize;
+                        justify-content: center;
+                        position: absolute;
+                        width: $cardSize;
+
+                        z-index: 999;
+
+                        @include tablet {
+                            height: $cardSizeTablet;
+                            width: $cardSizeTablet;
+                        }
+
+                        @include phone {
+                            height: $cardSizePhone;
+                            width: $cardSizePhone;
+                        }
+
+                        @include ultraWide {
+                            height: $cardSizeUW;
+                            width: $cardSizeUW;
+                        }
+
+                        @include moreThanPhone {
+                            &:hover .largeImg {
+                                height: 100%;
+                            }
+
+                            &:hover .wideImg {
+                                width: 100%;
+                            }
+                        }
+
+                        img {
+                            transition: .5s;
+                        }
+
+                        .largeImg {
+                            height: 85%;
+                        }
+
+                        .wideImg {
+                            width: 85%;
+                        }
+                    }
+
+                    .details {
+                        background-color: $thirdColor;
+                        display: flex;
+                        flex-direction: column;
+                        height: 100%;
+                        justify-content: center;
+                        left: $cardSize;
+                        padding: 0 20px;
+                        position: relative;
+                        font-size: 0.8rem;
+                        width: $cardSize;
+
+                        transition: .5s;
+
+                        @include tablet {
+                            left: $cardSizeTablet;
+                            width: $cardSizeTablet;
+                        }
+
+                        @include ultraWide {
+                            left: $cardSizeUW;
+                            width: $cardSizeUW;
+                        }
+
+                        @include phone {
+                            height: $cardSizePhone;
+                            padding-left: 10px;
+                            left: 0;
+                            top: $cardSizePhone;
+                            width: $cardSizePhone;
+                        }
+
+                        .presion {
+                            font-size: 1.2em;
+                            margin: 5px 0;
+                            font-weight: 300;
+                        }
+
+                        h2 {
+                            font-size: 2em;
+                            margin: 5px 0;
+                            font-weight: 600;
+                        }
+
+                        .potence {
+                            font-size: 1.2em;
+                            margin: 5px 0;
+                            font-weight: 600;
+                        }
+
+                        .size,
+                        .switchType,
+                        .colors {
+                            font-size: 1em;
+                            font-weight: 300;
+                            margin: 5px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .info {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5em;
+        text-align: center;
+
+        margin-bottom: 20px;
+
+        .container {
+            padding: 115px 0;
+            width: 65%;
+
+            max-width: 660px;
+
+            .secondSpan {
+                color: #b3b3b3;
+                font-weight: 300;
+            }
+
+
+
+            a {
+                display: block;
+                margin-top: 40px;
+            }
+        }
+
+        &::after {
+            border-bottom: 1px solid #e6e6e6;
+            content: '';
+            margin: 0 30px 10px;
+            width: calc(100% - 60px);
+
+            max-width: $maxWidth;
+        }
+    }
+
+    .moreAboutUs {
+        color: $mainColor;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: .8em;
+        font-weight: 300;
+    }
+
+    .types {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 120px 30px;
+
+        article {
+            display: flex;
+            width: 100%;
+
+            max-width: $maxWidth;
+
+            @include phone {
+                flex-wrap: wrap;
+            }
+
+            div {
+                width: 50%;
+                font-size: 1.6em;
+                display: flex;
+                flex-direction: column;
+
+                @include tablet {
+                    width: auto;
+                }
+
+
+                p {
+                    width: 370px;
+
+                    @include phone {
+                        width: 100%;
+                    }
+                }
+
+                .hardText {
+                    font-weight: 800;
+                }
+
+                .lightText {
+                    font-weight: 400;
+                }
+
+                .longText {
+                    color: $secColor;
+                    font-family: 'IBM Plex Mono', monospace;
+                    font-size: 0.64em;
+                    font-weight: 300;
+                    line-height: 1.6em;
+                    margin-top: 25px;
+                }
+
+                img {
+                    width: 80%;
+                    max-width: 460px;
+
+                    @include tablet {
+                        width: 95%;
+                    }
+
+                    @include phone {
+                        margin-bottom: 15px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .firstArticle {
+            div {
+                align-items: flex-start;
+            }
+        }
+
+        .secArticle {
+            margin-top: 90px;
+
+            div {
+                align-items: flex-end;
+            }
+
+            .textContent {
+
+                @include phone {
+                    order: 2;
+                }
+            }
+        }
+    }
+
+    .moreAbout {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.2em;
+        margin: 0 30px 120px;
+
+        .moreAboutUs {
+            margin-top: 10px;
+            ;
+            font-size: 0.7em;
+        }
+    }
+
+    .suscription {
+        display: flex;
+        justify-content: center;
+
+        .container {
+            border-top: 1px solid #e6e6e6;
+            font-size: 1.6em;
+            margin: 0 30px;
+            max-width: $maxWidth;
+            padding: 120px 0;
+            width: 100%;
+
+            .title {
+                color: $mainColor;
+                font-size: 1.2rem;
+            }
+
+            .subContainer {
+                display: flex;
+                margin-top: 1rem;
+                justify-content: space-between;
+
+                @include phone {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+                p {
+                    width: 50%;
+
+                    @include phone {
+                        width: 100%;
+                        margin-bottom: 15px;
+                    }
+
+                    .hardText {
+                        font-weight: 800;
+                    }
+
+                    .lightText {
+                        color: $secColor;
+                        font-weight: 300;
+                    }
+
+                }
+
+                a {
+                    background-color: $mainColor;
+                    border-radius: 4px;
+                    height: max-content;
+                    font-size: 1rem;
+                    font-weight: 800;
+                    padding: 18px 30px;
+
+                    @include phone {
+                        padding: 10px 20px;
+                    }
+
+                    &:hover {
+                        background-color: $mainColorHover;
+                    }
+                }
+            }
+        }
+    }
+}
