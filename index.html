@@ -17,7 +17,10 @@
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://kit.fontawesome.com/2c3d884b90.js" crossorigin="anonymous"></script>
     <script src="scripts/info.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="scripts/modules/navBar.js"></script>
+    <script src="scripts/modules/cards.js"></script>
+    <script src="scripts/modules/counter.js"></script>
+    <script src="scripts/modules/carousel.js"></script>
 </head>
 
 <body>
@@ -65,6 +68,36 @@
         </section>
     </header>
     <main>
+        <section>
+            <div id="fb-root"></div>
+
+            <div id="fb-customer-chat" class="fb-customerchat">
+            </div>
+
+            <script>
+                var chatbox = document.getElementById('fb-customer-chat');
+                chatbox.setAttribute("page_id", "326877514576674");
+                chatbox.setAttribute("attribution", "biz_inbox");
+            </script>
+
+            <script>
+                window.fbAsyncInit = function () {
+                    FB.init({
+                        xfbml: true,
+                        version: 'v13.0'
+                    });
+                };
+
+                (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            </script>
+        </section>
         <section class="about">
             <div>
                 <p>
@@ -93,16 +126,17 @@
                 </span>
             </span>
         </section>
-        <section class="carousel" id="carrusel">
+        <section class="carousel" id="carousel">
+            <h3 class="title">Modelos disponibles</h3>
+            <p>Haz click sobre una imagen para ver u ocultar los detalles.</p>
             <div class="cont">
-                <h3 class="title">Modelos disponibles</h3>
                 <div class="corouselContainer" id="corouselContainer">
                 </div>
-                <p>Coloca el cursor sobre una imagen para ver los detalles</p>
             </div>
         </section>
         <section class="info">
             <span class="container">
+                <div>a</div>
                 <span class="firstSpan">¿Te interesó algún modelo o tienes una duda sobre alguna característica?</span>
                 <span class="secondSpan">Puedes contactarnos por medio del siguiente enlace y atenderemos todas tus
                     dudas referentes a précios, componentes, métodos de instalacion etc.</span>

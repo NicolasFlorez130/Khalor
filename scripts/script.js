@@ -1,9 +1,6 @@
 window.onload = () => {
     //phone navbar
-
     const button = document.querySelector('#menuIcon');
-
-    posX = window.pageYOffset;
 
     button.addEventListener('click', () => {
         const as = document.querySelectorAll('#phoneNavBar a')
@@ -133,4 +130,80 @@ window.onload = () => {
         document.querySelector('#corouselContainer').appendChild(container);
     });
 
+    const cardsContainer = document.querySelector('#corouselContainer');
+    const cont = document.querySelector('.cont'),
+        items = document.querySelectorAll('.item'),
+        minWidth = "(min-width: 900px)";
+
+    let initialPosition = null,
+        actualPosition = 0,
+        moving = false;
+
+    cont.addEventListener('mousedown', e => {
+        initialPosition = e.pageX;
+        moving = true;
+        clearInterval(initialShow);
+    })
+
+    window.addEventListener('mouseup', e => {
+        moving = false;
+        actualPosition = cont.scrollLeft;
+
+    });
+
+    cont.addEventListener('mousemove', e => {
+        if (moving) {
+            const currentPosition = e.pageX,
+                diff = initialPosition - currentPosition;
+            cont.scrollTo(actualPosition + diff, 0);
+        }
+    });
+
+    cont.addEventListener('scroll', e => {
+        items.forEach(item => {
+            item.addEventListener('click', e => e.preventDefault());
+
+        })
+    })
+
+    items.forEach((item, i) => {
+        let evnt;
+        window.matchMedia(minWidth).matches ? evnt = 'dblclick' : evnt = 'click';
+        item.addEventListener(evnt, e => {
+
+            const styles = window.getComputedStyle(item);
+            cont.style.scrollBehavior = "smooth";
+            let returnDistance = () => (parseInt(styles.width) + parseInt(styles.marginRight) + parseInt(styles.marginLeft)) * i;
+            item.classList.toggle('showed') ? cont.scrollTo((returnDistance()), 0) : 0;
+            if (i == items.length - 1) {
+                setTimeout(() => {
+                    cont.style.scrollBehavior = "smooth";
+                    cont.scrollTo((returnDistance()), 0)
+                    cont.style.scrollBehavior = "auto";
+                }, parseFloat(styles.transitionDuration.slice(0, styles.transitionDuration.length - 1)) * 1000);
+            }
+
+            cont.addEventListener('mousedown', () => {
+                actualPosition = cont.scrollLeft;
+            })
+            cont.style.scrollBehavior = "auto";
+            cont.scrollIntoView()
+
+        })
+    });
+
+    const uwuStyles = window.getComputedStyle(items[0]),
+        uwuSize = parseInt(uwuStyles.width) + parseInt(uwuStyles.marginLeft) + parseInt(uwuStyles.marginRight);
+    let uwu = uwuSize,
+        initialShow;
+
+    if (window.matchMedia(minWidth).matches) {
+        initialShow = setInterval(() => {
+            cont.style.scrollBehavior = "smooth";
+            cont.scrollTo(uwu, 0);
+            uwu > parseFloat(window.getComputedStyle(cardsContainer).width) - (uwuSize * 4) ? uwu = 0 : uwu += uwuSize;
+            cont.style.scrollBehavior = "auto";
+            actualPosition = cont.scrollLeft + uwuSize;
+        }, 3000)
+    }
 }

@@ -7,13 +7,24 @@ $thirdColor: #2b2d42;
 $thirdColorLight: #669BBC;
 $fourthColor: #edf2f4;
 $maxWidth: 1170px;
-$imagesCuant: 8;
 
-$cardSize: 25vw;
-$cardSizeTablet: 45vw;
-$cardSizePhone: 70vw;
-$cardSizeUW: 15vw;
+:root {
+    --marginSize: 2vw;
+    --cardSize: 27vw;
 
+    @include ultraWide {
+        --cardSize: 15vw;
+    }
+
+    @include tablet {
+        --cardSize: 30vw;
+    }
+
+    @include phone {
+        --cardSize: 75vw;
+        --marginSize: 4vw;
+    }
+}
 
 * {
     font-family: 'Libre Franklin', sans-serif;
@@ -21,6 +32,7 @@ $cardSizeUW: 15vw;
     line-height: 1.5em;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
