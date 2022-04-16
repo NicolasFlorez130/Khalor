@@ -57,7 +57,7 @@ window.onload = () => {
 
     let dots = document.querySelectorAll('.dot');
 
-    counter.style.cssText = `background-image: url('images/backgrounds/${bg}');'`;
+    counter.style.cssText = `background-image: url('../images/backgrounds/${bg}');'`;
     dots[0].style.color = 'white';
 
     setInterval(() => {

@@ -3,9 +3,13 @@ window.addEventListener('load', () => {
 
     button.addEventListener('click', () => {
         const as = document.querySelectorAll('#phoneNavBar a')
-        document.querySelector('#phoneNavBar').classList.toggle('fullSize') ?
-            window.onscroll = () => window.scrollTo(0, 0) :
+        if (document.querySelector('#phoneNavBar').classList.toggle('fullSize')) {
+            window.onscroll = () => window.scrollTo(0, 0);
+            document.body.style.overflowY = 'hidden';
+        } else {
             window.onscroll = () => {};
+            document.body.style.overflowY = 'auto';
+        }
         as.forEach(a => {
             a.addEventListener('click', () => button.click())
         });

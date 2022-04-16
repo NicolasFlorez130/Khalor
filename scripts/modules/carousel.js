@@ -15,9 +15,9 @@ window.addEventListener('load', () => {
         container.className = 'item';
 
         imgContainer.className = 'image';
-        img.src = `images/products/${product.img}`;
+        img.src = `${window.location.origin}/images/products/${product.img}`;
         img.className = product.format;
-        img.alt = 'calefactor - calefactor infrarojo - khalor';
+        img.alt = 'calefactor de ambiente infrarojo Khalor en Bogotá';
 
         details.className = 'details';
 
@@ -88,12 +88,12 @@ window.addEventListener('load', () => {
     items.forEach((item, i) => {
 
         item.addEventListener('mousedown', e => {
-            item.firstChild.style.cssText = 'background-color: #eee'
+            item.firstChild.style.cssText = 'transition: .05s; background-color: #eee'
         })
 
         let eventos = ['mouseup', 'mousemove'];
-        eventos.forEach((e) => item.addEventListener(e, e => {
-            item.firstChild.style.cssText = 'background-color: white'
+        eventos.forEach(ev => item.addEventListener(ev, e => {
+            item.firstChild.style.cssText = 'transition: .5s; background-color: white'
         }))
 
         item.addEventListener('click', e => {
@@ -101,7 +101,7 @@ window.addEventListener('load', () => {
             if (a == 1) {
                 const styles = window.getComputedStyle(item);
                 cont.style.scrollBehavior = "smooth";
-                let returnDistance = () => (parseInt(styles.width) + parseInt(styles.marginRight) + parseInt(styles.marginLeft)) * i ;
+                let returnDistance = () => (parseInt(styles.width) + parseInt(styles.marginRight) + parseInt(styles.marginLeft)) * i;
                 item.classList.toggle('showed') ? cont.scrollTo((returnDistance()), 0) : 0;
 
                 if (i == items.length - 1) {

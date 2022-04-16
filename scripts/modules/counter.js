@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
 
     let dots = document.querySelectorAll('.dot');
 
-    counter.style.cssText = `background-image: url('images/backgrounds/${bg}');'`;
+    counter.style.backgroundImage = `url("${window.location.origin}/images/backgrounds/${bg}")`;
     dots[0].style.color = 'white';
 
     setInterval(() => {
@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
             dot.style.color = bg == backg[i].img ? 'white' : 'rgba(255, 255, 255, 0.4)';
         });
 
-        counter.style.cssText = `background-image: url('images/backgrounds/${bg}');'`;
+        counter.style.backgroundImage = `url("${window.location.origin}/images/backgrounds/${bg}")`;
     }, 100)
 
     dots.forEach((dot, i) => {

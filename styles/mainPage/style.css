@@ -35,40 +35,12 @@
 
 body {
   font-size: 14px;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
   color: #edf2f4;
-}
-
-header {
-  background: url("../images/headerImage2.png");
-  background-attachment: fixed;
-  background-size: 1440px;
-  background-position: 50% 0%;
-  background-size: cover;
-}
-
-@media only screen and (min-width: 2000px) {
-  header {
-    background-size: cover;
-    background-position: 40% 120%;
-  }
-}
-
-@media only screen and (max-width: 820px) {
-  header {
-    background-position: 35% 0;
-    background-size: cover;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  header {
-    background-size: cover;
-    background-position: 30% 0%;
-  }
 }
 
 header span {
@@ -149,7 +121,6 @@ header .navBar div .menuIcon {
 }
 
 header .navBar div .phoneNavBar {
-  background-color: #ef233c;
   left: 0px;
   top: -100vh;
   position: absolute;
@@ -229,6 +200,38 @@ header .navBar div .options ul li:hover::after {
   width: 70%;
 }
 
+header {
+  background: url("../../images/headerImage.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% 90%;
+}
+
+@media only screen and (min-width: 2000px) {
+  header {
+    background-size: cover;
+    background-position: 40% 100%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  header {
+    background-position: 35% 0;
+    background-size: cover;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    background-size: cover;
+    background-position: 30% 0%;
+  }
+}
+
+header .phoneNavBar {
+  background-color: #ef233c;
+}
+
 header .banner {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -241,7 +244,7 @@ header .banner {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 120px 30px;
+  padding: 120px 30px 0;
 }
 
 @media only screen and (max-width: 480px) {
@@ -267,8 +270,8 @@ header .banner .firstDiv h1 {
 }
 
 header .banner .secDiv {
-  font-size: 1em;
-  margin: 10px 0;
+  font-size: 1.2em;
+  margin: 60px 0 120px;
   text-align: center;
   -webkit-transition: 1s;
   transition: 1s;
@@ -278,36 +281,6 @@ header .banner .secDiv span {
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 400;
   font-size: 1.2em;
-}
-
-header .banner .button {
-  border: 0;
-  background-color: #ef233c;
-  border-radius: 4px;
-  color: white;
-  cursor: pointer;
-  font-size: 1.1em;
-  font-weight: 800;
-  margin: 30px;
-  padding: 20px 30px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-@media only screen and (max-width: 480px) {
-  header .banner .button {
-    padding: 15px 25px;
-  }
-}
-
-@media (max-width: 300) {
-  header .banner .button {
-    padding: 10px 20px;
-  }
-}
-
-header .banner .button:hover {
-  background-color: #d90429;
 }
 
 .bgCol {
@@ -321,193 +294,6 @@ main .carousel .cont .corouselContainer .item .image {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-main .about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1.7em;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 110px 30px;
-}
-
-main .about div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-width: 1170px;
-}
-
-main .about div p {
-  width: 50%;
-  text-align: center;
-}
-
-@media only screen and (max-width: 480px) {
-  main .about div p {
-    width: 100%;
-  }
-}
-
-main .about div p .title {
-  font-weight: 800;
-}
-
-main .about div p .desc {
-  color: rgba(141, 153, 174, 0.541);
-  font-weight: 300;
-}
-
-main .cards {
-  margin: 120px 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-main .cards div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  max-width: 1170px;
-}
-
-@media only screen and (max-width: 820px) {
-  main .cards div {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-}
-
-main .cards div .card {
-  border-radius: 2px;
-  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 20px;
-  width: 32%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media only screen and (max-width: 820px) {
-  main .cards div .card {
-    width: 45%;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  main .cards div .card {
-    width: 100%;
-  }
-}
-
-main .cards div .card:hover .icon {
-  color: #2b2d42;
-}
-
-main .cards div .card div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 60px 0;
-  width: 80%;
-}
-
-main .cards div .card div .icon {
-  color: #669BBC;
-  font-size: 3rem;
-  margin: 0;
-  width: 20%;
-  max-width: 60px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-main .cards div .card div h3 {
-  margin: 20px 0;
-}
-
-main .cards div .card div p {
-  color: rgba(141, 153, 174, 0.541);
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 300;
-  margin-bottom: 20px;
-}
-
-main .counter {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 30px;
-}
-
-@media only screen and (max-width: 820px) {
-  main .counter {
-    margin: 0;
-  }
-}
-
-main .counter span {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  background-position: center;
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 720px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  max-width: 1500px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-@media only screen and (max-width: 480px) {
-  main .counter span {
-    height: 100vw;
-  }
-}
-
-main .counter span i {
-  color: rgba(141, 153, 174, 0.541);
-  cursor: pointer;
-  font-size: 0.5em;
-  padding: 0 5px 10px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
 }
 
 main .carousel {
@@ -538,7 +324,7 @@ main .carousel .title {
 }
 
 main .carousel p {
-  color: rgba(141, 153, 174, 0.541);
+  color: #8d99ae;
   font-weight: 300;
   text-align: center;
   font-size: 1rem;
@@ -547,7 +333,6 @@ main .carousel p {
 
 main .carousel .cont {
   max-width: 1500px;
-  margin-bottom: 30px;
   overflow-x: scroll;
   scroll-behavior: auto;
 }
@@ -572,7 +357,7 @@ main .carousel .cont::-webkit-scrollbar-thumb {
 }
 
 main .carousel .cont:hover::-webkit-scrollbar-thumb {
-  background: rgba(141, 153, 174, 0.541);
+  background: #8d99ae;
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -625,8 +410,6 @@ main .carousel .cont .corouselContainer .item .image {
   pointer-events: none;
   -ms-touch-action: none;
       touch-action: none;
-  -webkit-transition: .1s;
-  transition: .1s;
   z-index: 999;
 }
 
@@ -734,11 +517,10 @@ main .info {
           flex-direction: column;
   font-size: 1.5em;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 main .info .container {
-  padding: 115px 0;
+  margin-top: 90px;
   width: 65%;
   max-width: 660px;
 }
@@ -754,60 +536,20 @@ main .info .container .secondSpan {
 }
 
 main .info .container a {
+  color: #ef233c;
   display: block;
   margin-top: 40px;
+  cursor: pointer;
 }
 
-main .info::after {
-  border-bottom: 1px solid #e6e6e6;
-  content: '';
-  margin: 0 30px 10px;
-  width: calc(100% - 60px);
-  max-width: 1170px;
-}
-
-main .moreAboutUs {
-  color: #ef233c;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: .8em;
-  font-weight: 300;
-}
-
-main .types {
+main .counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 90px 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 120px 30px;
-}
-
-main .types article {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  max-width: 1170px;
-}
-
-@media only screen and (max-width: 480px) {
-  main .types article {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-main .types article div {
-  width: 50%;
-  font-size: 1.6em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -815,181 +557,90 @@ main .types article div {
 }
 
 @media only screen and (max-width: 820px) {
-  main .types article div {
-    width: auto;
+  main .counter {
+    margin: 90px 0;
   }
 }
 
-main .types article div p {
-  width: 370px;
-}
-
-@media only screen and (max-width: 480px) {
-  main .types article div p {
-    width: 100%;
-  }
-}
-
-main .types article div .hardText {
-  font-weight: 800;
-}
-
-main .types article div .lightText {
-  font-weight: 400;
-}
-
-main .types article div .longText {
-  color: rgba(141, 153, 174, 0.541);
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.64em;
-  font-weight: 300;
-  line-height: 1.6em;
-  margin-top: 25px;
-}
-
-main .types article div img {
-  width: 80%;
-  max-width: 460px;
-}
-
-@media only screen and (max-width: 820px) {
-  main .types article div img {
-    width: 95%;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  main .types article div img {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-}
-
-main .types .firstArticle div {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-main .types .secArticle {
-  margin-top: 90px;
-}
-
-main .types .secArticle div {
+main .counter span {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 720px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 1500px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 @media only screen and (max-width: 480px) {
-  main .types .secArticle .textContent {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+  main .counter span {
+    height: 100vw;
   }
 }
 
-main .moreAbout {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+main .counter span i {
+  color: #8d99ae;
+  cursor: pointer;
+  font-size: 0.5em;
+  padding: 0 5px 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+main .counter .buttonSpan {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  font-size: 1.2em;
-  margin: 0 30px 120px;
-}
-
-main .moreAbout .moreAboutUs {
-  margin-top: 10px;
-  font-size: 0.7em;
-}
-
-main .suscription {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-main .suscription .container {
-  border-top: 1px solid #e6e6e6;
-  font-size: 1.6em;
-  margin: 0 30px;
-  max-width: 1170px;
-  padding: 120px 0;
+main .counter .buttonSpan p {
+  font-weight: 600px;
+  font-size: 1.5em;
+  text-align: center;
+  margin: 60px 0 30px;
   width: 100%;
 }
 
-main .suscription .container .title {
-  color: #ef233c;
-  font-size: 1.2rem;
-}
-
-main .suscription .container .subContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 1rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-@media only screen and (max-width: 480px) {
-  main .suscription .container .subContainer {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-main .suscription .container .subContainer p {
-  width: 50%;
-}
-
-@media only screen and (max-width: 480px) {
-  main .suscription .container .subContainer p {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-}
-
-main .suscription .container .subContainer p .hardText {
-  font-weight: 800;
-}
-
-main .suscription .container .subContainer p .lightText {
-  color: rgba(141, 153, 174, 0.541);
-  font-weight: 300;
-}
-
-main .suscription .container .subContainer a {
+main .counter .buttonSpan .button {
+  border: 0;
   background-color: #ef233c;
   border-radius: 4px;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1.1em;
   font-weight: 800;
-  padding: 18px 30px;
+  padding: 20px 30px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 @media only screen and (max-width: 480px) {
-  main .suscription .container .subContainer a {
+  main .counter .buttonSpan .button {
+    padding: 15px 25px;
+  }
+}
+
+@media (max-width: 300) {
+  main .counter .buttonSpan .button {
     padding: 10px 20px;
   }
 }
 
-main .suscription .container .subContainer a:hover {
+main .counter .buttonSpan .button:hover {
   background-color: #d90429;
 }
 
@@ -1028,9 +679,9 @@ footer .container {
 }
 
 footer .container .firstSection {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
