@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
         container.className = 'item';
 
         imgContainer.className = 'image';
-        img.src = `../../images/products/${product.img}`;
+        img.src = `images/products/${product.img}`;
         img.className = product.format;
         img.alt = 'calefactor de ambiente infrarojo Khalor en Bogotá';
 

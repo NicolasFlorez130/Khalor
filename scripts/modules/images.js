@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
     imgs.forEach((i) => {
         const div = document.createElement('div'),
             img = document.createElement('img');
-        img.src = `../../images/backgrounds/background%20(${i}).jpg`;
+        img.src = `images/backgrounds/background%20(${i}).jpg`;
         img.alt = 'calefactor de ambiente infrarojo Khalor en Bogotá';
         div.appendChild(img);
 
