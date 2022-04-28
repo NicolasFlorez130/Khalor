@@ -113,6 +113,10 @@ main {
                         .wideImg {
                             width: 85%;
                         }
+
+                        .fullSizeImg {
+                            width: 100%;
+                        }
                     }
 
                     .details {
@@ -122,7 +126,6 @@ main {
                         height: 100%;
                         justify-content: center;
                         left: var(--cardSize);
-                        padding: 0 20px;
                         pointer-events: none;
                         position: relative;
                         font-size: 0.8rem;
@@ -132,7 +135,6 @@ main {
 
                         @include phone {
                             height: var(--cardSize);
-                            padding-left: 10px;
                             left: 0;
                             top: var(--cardSize);
                         }
@@ -162,6 +164,15 @@ main {
                             font-weight: 300;
                             margin: 5px 0;
                         }
+
+                        div,
+                        h2 {
+                            padding: 0 20px;
+
+                            @include phone {
+                                padding-left: 0 5px;
+                            }
+                        }
                     }
 
                     .details,
@@ -185,6 +196,10 @@ main {
 
                         .image .wideImg {
                             width: 100%;
+                        }
+
+                        .image .fullSizeImg {
+                            width: 105%;
                         }
                     }
                 }

@@ -1,107 +1,89 @@
 cards = [{
-    link: '<i class="fa-solid fa-bolt"></i>',
-    title: 'Ventaja 1',
-    description: 'Ne usu illud albucius abhor reant, partiendo scriptorem mel ne.'
+    link: '<i class="fa-solid fa-fire"></i>',
+    title: 'Sin desperdicio.',
+    description: 'La relación costo-eficiencia es muy alta ya que el consumo de gas es muy bajo y la generación de calor es bastante eficiente.'
 }, {
     link: '<i class="fa-solid fa-leaf"></i>',
-    title: 'Ventaja 2',
-    description: 'Fuisset intellegat delicatissimi ex mea. Cu probo integre nec.'
+    title: 'Contaminación minima.',
+    description: 'La producción de monóxido es muy baja en relación a otros tipos de sistemas de combustión, ya que los infrarrojos no generan ningún tipo de llama.'
 }, {
-    link: '<i class="fa-solid fa-fire"></i>',
-    title: 'Ventaja 3',
-    description: 'Facer nostro causae ei sed. Vix ex quidam detraxit, vis ad nostro laoreet.'
+    link: '<i class="fa-solid fa-bolt"></i>',
+    title: 'Facil instalación.',
+    description: 'Su intalación es bastante sencilla, aunque siempre se debe acompañar del conocimiento de un técnico certificado Vanti o del asesoramiento del ente estatal que regula el gas en su sector, ya sea comercial o residencial.'
 }];
 
 backgrounds = [{
-    img: 'background (10).jpg',
+    img: 'background (11).jpg',
     alt: 'img10'
 }, {
     img: 'background (14).jpg',
     alt: 'img14'
 }, {
-    img: 'background (15).jpg',
+    img: 'background (16).jpg',
     alt: 'img15'
 }, {
-    img: 'background (12).jpg',
+    img: 'background (17).jpg',
     alt: 'img12'
 }, {
-    img: 'background (18).jpg',
+    img: 'background (20).jpg',
     alt: 'img18'
 }, {
-    img: 'background (19).jpg',
+    img: 'background (21).jpg',
     alt: 'img19'
 }];
 
 products = [{
     img: '1.png',
-    presion: 'Presion',
-    name: 'Name',
-    potence: 'Potence',
-    switchType: 'Switch Type',
-    size: 'Size',
-    colors: 'Colors',
-    format: 'wideImg'
-}, {
-    img: '2.png',
-    presion: 'Presion',
-    name: 'Name',
-    potence: 'Potence',
-    switchType: 'Switch Type',
-    size: 'Size',
-    colors: 'Colors',
-    format: 'wideImg'
-}, {
-    img: '3.png',
-    presion: 'Presion',
-    name: 'Name',
-    potence: 'Potence',
-    switchType: 'Switch Type',
-    size: 'Size',
-    colors: 'Colors',
+    presion: '30 - 35 mbars',
+    name: 'Calefactor de pared grande',
+    potence: '45.000 Btu',
+    switchType: 'Manual, termocupla, switch o control remoto',
+    size: 'Ancho: 100cms - Alto: 27cms',
+    colors: 'Negro - Blanco - Bronce',
     format: 'wideImg'
 }, {
     img: '4.png',
-    presion: 'Presion',
-    name: 'Name',
-    potence: 'Potence',
-    switchType: 'Switch Type',
-    size: 'Size',
-    colors: 'Colors',
+    presion: 'Cilindros de hasta 20 libras',
+    name: 'Calefactor de pedestal',
+    potence: '35.000 Btu',
+    switchType: 'Manual sencillo o termocupla',
+    size: 'Ancho: - Alto: 202cms',
+    colors: 'Negro',
     format: 'largeImg'
 }, {
     img: '5.png',
-    presion: 'Presion',
-    name: 'Name',
-    potence: 'Potence',
-    switchType: 'Switch Type',
-    size: 'Size',
-    colors: 'Colors',
+    presion: '20 - 23 mbars',
+    name: 'Calefactor de pared grande',
+    potence: '18.000 Btu',
+    switchType: 'Manual, termocupla, switch o control remoto',
+    size: 'Ancho: 90cms - Alto: 25cms',
+    colors: 'Negro - Blanco - Bronce',
     format: 'wideImg'
 }, {
     img: '6.png',
-    presion: 'Presion',
-    name: 'Name',
-    potence: 'Potence',
-    switchType: 'Switch Type',
-    size: 'Size',
-    colors: 'Colors',
+    presion: '20 - 23 mbars',
+    name: 'Calefactor de pared mediano',
+    potence: '22.000 Btu',
+    switchType: 'Manual, switch o control remoto',
+    size: 'Ancho: 80cms - Alto: 25cms',
+    colors: 'Negro - Blanco - Bronce',
     format: 'wideImg'
 }, {
     img: '7.png',
-    presion: 'Presion',
-    name: 'Name',
-    potence: 'Potence',
-    switchType: 'Switch Type',
-    size: 'Size',
-    colors: 'Colors',
+    presion: 'Cilindros de hasta 30 libras',
+    name: 'Calefactor de pedestal',
+    potence: '35.000 Btu',
+    switchType: 'Manual, sencillo o termocupla',
+    size: 'Ancho: - Alto: 205cms',
+    colors: 'Negro - Plata - Bronce',
     format: 'largeImg'
 }, {
     img: '8.png',
-    presion: 'Presion',
-    name: 'Name',
-    potence: 'Potence',
-    switchType: 'Switch Type',
-    size: 'Size',
-    colors: 'Colors',
+    presion: 'Cilindros de hasta 20 libras',
+    name: 'Calefactor de pedestal',
+    potence: '35.000 Btu',
+    switchType: 'Manual sencillo o termocupla',
+    size: 'Ancho: - Alto: 202cms',
+    colors: 'Negro',
     format: 'largeImg'
 }];

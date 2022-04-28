@@ -53,11 +53,11 @@ window.onload = () => {
     let count = 0,
         bg = backg[0].img;
 
-    const counter = document.querySelector('#imageShowed');
+    const counter = document.querySelector('#assetshowed');
 
     let dots = document.querySelectorAll('.dot');
 
-    counter.style.cssText = `background-image: url('../images/backgrounds/${bg}');'`;
+    counter.style.cssText = `background-image: url('../assets/backgrounds/${bg}');'`;
     dots[0].style.color = 'white';
 
     setInterval(() => {
@@ -74,7 +74,7 @@ window.onload = () => {
             dot.style.color = bg == backg[i].img ? 'white' : 'rgba(255, 255, 255, 0.4)';
         });
 
-        counter.style.cssText = `background-image: url('images/backgrounds/${bg}');'`;
+        counter.style.cssText = `background-image: url('assets/backgrounds/${bg}');'`;
     }, 100)
 
     dots.forEach((dot, i) => {
@@ -100,7 +100,7 @@ window.onload = () => {
         container.className = 'item';
 
         imgContainer.className = 'image';
-        img.src = `images/products/${product.img}`;
+        img.src = `assets/products/${product.img}`;
         img.className = product.format;
         img.alt = 'calefactor - calefactor infrarojo - khalor';
 

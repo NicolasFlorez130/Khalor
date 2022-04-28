@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
     imgs.forEach((i) => {
         const div = document.createElement('div'),
             img = document.createElement('img');
-        img.src = `images/backgrounds/background%20(${i}).jpg`;
+        img.src = `assets/backgrounds/background%20(${i}).jpg`;
         img.alt = 'calefactor de ambiente infrarojo Khalor en Bogotá';
         div.appendChild(img);
 
@@ -47,10 +47,10 @@ window.addEventListener('load', () => {
         aux++ == 4 ? aux = 1 : 0;
     });
 
+    let node = document.querySelector('.expandedImage .background img');
     items.forEach(item => {
         item.addEventListener('click', () => {
             document.querySelector('.expandedImage .background').classList.add('showed');
-            let node = document.querySelector('.expandedImage .background img');
             node.src = item.lastChild.src;
             deviceType() == 0 ? document.body.style.cssText = 'overflow-y: hidden;' : 0;
         })

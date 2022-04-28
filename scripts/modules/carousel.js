@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
         container.className = 'item';
 
         imgContainer.className = 'image';
-        img.src = `images/products/${product.img}`;
+        img.src = `assets/products/${product.img}`;
         img.className = product.format;
         img.alt = 'calefactor de ambiente infrarojo Khalor en Bogotá';
 
@@ -88,12 +88,12 @@ window.addEventListener('load', () => {
     items.forEach((item, i) => {
 
         item.addEventListener('mousedown', e => {
-            item.firstChild.style.cssText = 'transition: .05s; background-color: #eee'
+            !item.classList.contains('firstItem') ? item.firstChild.style.cssText = 'transition: .05s; background-color: #eee' : 0;
         })
 
         let eventos = ['mouseup', 'mousemove'];
         eventos.forEach(ev => item.addEventListener(ev, e => {
-            item.firstChild.style.cssText = 'transition: .5s; background-color: white'
+            !item.classList.contains('firstItem') ? item.firstChild.style.cssText = 'transition: .5s; background-color: white' : 0;
         }))
 
         item.addEventListener('click', e => {

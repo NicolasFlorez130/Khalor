@@ -201,7 +201,7 @@ header .navBar div .options ul li:hover::after {
 }
 
 header {
-  background: url("../../images/headerImage2.png");
+  background: url("../../assets/headerImage2.png");
   background-attachment: fixed;
   background-size: 100vw;
   background-position: 50% -30%;
