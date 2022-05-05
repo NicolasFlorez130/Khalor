@@ -12,24 +12,30 @@ window.addEventListener('load', () => {
 
     deviceType() == 0 ? document.querySelector('.heavyText').style.display = 'block' : 0;
 
-    let cuant = 24,
+    let calefactCuant = 19,
+        chimCuant = 4,
         aux = 1;
 
     let imgs = [],
         items = [];
 
-    for (let i = 1; i <= cuant; i++) {
-        imgs.push(i);
+    for (let i = 1; i <= calefactCuant; i++) {
+        imgs.push([`calefactor (${i}).jpg`, 'calefactor de ambiente infrarojo Khalor en Bogotá', 'Calefactor infrarrojo Khalor']);
+    }
+
+    for (let i = 1; i <= chimCuant; i++) {
+        imgs.push([`chimenea (${i}).jpg`, 'chimenea a gas Khalor en Bogotá', 'Chimenea a gas Khalor']);
     }
 
     imgs = imgs.sort((a, b) => 0.5 - Math.random())
     imgs = imgs.sort((a, b) => 0.5 - Math.random())
 
-    imgs.forEach((i) => {
+    imgs.forEach(product => {
         const div = document.createElement('div'),
             img = document.createElement('img');
-        img.src = `assets/backgrounds/background%20(${i}).jpg`;
-        img.alt = 'calefactor de ambiente infrarojo Khalor en Bogotá';
+        img.src = `assets/backgrounds/${product[0]}`;
+        img.alt = product[1];
+        img.title = product[2];
         div.appendChild(img);
 
         switch (aux) {
@@ -52,6 +58,8 @@ window.addEventListener('load', () => {
         item.addEventListener('click', () => {
             document.querySelector('.expandedImage .background').classList.add('showed');
             node.src = item.lastChild.src;
+            node.alt = item.lastChild.alt;
+            node.title = item.lastChild.title;
             deviceType() == 0 ? document.body.style.cssText = 'overflow-y: hidden;' : 0;
         })
     });

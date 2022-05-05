@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de imágenes</title>
     <link rel="icon" href="assets/khalor.ico">
     <link rel="stylesheet" href="styles/gallery/style.css">
     <script src="https://kit.fontawesome.com/2c3d884b90.js" crossorigin="anonymous"></script>
@@ -12,15 +13,22 @@
     <script src="scripts/modules/navBar.js"></script>
     <script src="scripts/modules/widgets.js"></script>
     <script src="scripts/modules/images.js"></script>
-    <title>Galería de imágenes</title>
+    <script src="scripts/modules/loadScreen.js"></script>
 </head>
 
 <body>
+    <div class="loadScreen">
+        <span class="logo">
+            <span class="title"><span class="p">K</span><span>halor</span></span>
+        </span>
+        <img src="assets/loadScreenGif3.gif">
+    </div>
     <div class="expandedImage">
         <div class="background">
             <div class="out">
             </div>
-            <img src="assets/images/calefactor (1).jpg" alt="calefactor de ambiente infrarojo Khalor en Bogotá">
+            <img src="assets/images/calefactor (1).jpg" alt="calefactor de ambiente infrarojo Khalor en Bogotá"
+                title="Calefactor infrarrojo a gas Khalor">
             <p>Da click fuera de la imagen para minimizarla.</p>
         </div>
     </div>

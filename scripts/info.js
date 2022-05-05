@@ -13,22 +13,22 @@ cards = [{
 }];
 
 backgrounds = [{
-    img: 'background (11).jpg',
+    img: 'chimenea (1).jpg',
     alt: 'img10'
 }, {
-    img: 'background (14).jpg',
+    img: 'chimenea (2).jpg',
     alt: 'img14'
 }, {
-    img: 'background (16).jpg',
+    img: 'chimenea (4).jpg',
     alt: 'img15'
 }, {
-    img: 'background (17).jpg',
+    img: 'calefactor (14).jpg',
     alt: 'img12'
 }, {
-    img: 'background (20).jpg',
+    img: 'calefactor (16).jpg',
     alt: 'img18'
 }, {
-    img: 'background (21).jpg',
+    img: 'calefactor (19).jpg',
     alt: 'img19'
 }];
 

@@ -43,6 +43,98 @@ a {
   color: #edf2f4;
 }
 
+body {
+  overflow: hidden;
+}
+
+body .loadScreen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #030303;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999999;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body .loadScreen img {
+  height: 7rem;
+}
+
+body .loadScreen span {
+  color: #edf2f4;
+  font-family: 'Pridi', serif;
+  cursor: context-menu;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .loadScreen span::-moz-selection,
+body .loadScreen span span::-moz-selection {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+body .loadScreen span::selection,
+body .loadScreen span span::selection {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+body .loadScreen span .title {
+  font-size: 2rem;
+}
+
+body .loadScreen span .title .p {
+  height: 100%;
+  color: #ef233c;
+  font-size: 3rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .loadScreen span .title .pDark {
+  color: #edf2f4;
+}
+
+body .loadScreen span .title {
+  font-size: 3.8rem;
+}
+
+body .loadScreen span .title .p {
+  font-size: 5rem;
+}
+
+body .loadScreen .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .loadScreen p {
+  color: #edf2f4;
+}
+
 header span {
   color: #edf2f4;
   font-family: 'Pridi', serif;
@@ -201,7 +293,7 @@ header .navBar div .options ul li:hover::after {
 }
 
 header {
-  background: url("../../assets/headerImage3.png");
+  background: url("../../assets/headerImage3.jpg");
   background-attachment: fixed;
   background-size: 100vw;
   background-position: 50% -15%;

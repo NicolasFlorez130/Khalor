@@ -18,6 +18,7 @@ window.addEventListener('load', () => {
         img.src = `assets/products/${product.img}`;
         img.className = product.format;
         img.alt = 'calefactor de ambiente infrarojo Khalor en Bogotá';
+        img.title = 'Calefactor infrarrojo a gas Khalor';
 
         details.className = 'details';
 
