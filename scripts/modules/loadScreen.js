@@ -4,6 +4,5 @@ window.addEventListener('load', e => {
     loadScreen.style.opacity = 0;
     setInterval(() => {
         loadScreen.style.display = 'none';
-        document.body.style.overflowY = 'auto';
-    }, 500)
+    }, 1000)
 })

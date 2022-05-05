@@ -1,5 +1,4 @@
 body {
-    overflow: hidden;
 
     .loadScreen {
 
@@ -8,7 +7,7 @@ body {
         flex-direction: column;
         align-items: center;
 
-        position: sticky;
+        position: fixed;
         top: 0;
         background-color: $loadScreenColor;
         width: 100vw;
@@ -16,7 +15,7 @@ body {
 
         z-index: 99999999;
 
-        transition: 1s;
+        transition: 1.5s;
 
         img {
             height: 7rem

@@ -43,10 +43,6 @@ a {
   color: #edf2f4;
 }
 
-body {
-  overflow: hidden;
-}
-
 body .loadScreen {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -61,15 +57,14 @@ body .loadScreen {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
-  background-color: #030303;
+  background-color: #0F1217;
   width: 100vw;
   height: 100vh;
   z-index: 99999999;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
 }
 
 body .loadScreen img {
