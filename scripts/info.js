@@ -13,27 +13,27 @@ cards = [{
 }];
 
 backgrounds = [{
-    img: 'chimenea (1).jpg',
+    img: 'chimenea_1_.webp',
     alt: 'img10'
 }, {
-    img: 'chimenea (2).jpg',
+    img: 'chimenea_2_.webp',
     alt: 'img14'
 }, {
-    img: 'chimenea (4).jpg',
+    img: 'chimenea_4_.webp',
     alt: 'img15'
 }, {
-    img: 'calefactor (14).jpg',
+    img: 'calefactor_14_.webp',
     alt: 'img12'
 }, {
-    img: 'calefactor (16).jpg',
+    img: 'calefactor_16_.webp',
     alt: 'img18'
 }, {
-    img: 'calefactor (19).jpg',
+    img: 'calefactor_19_.webp',
     alt: 'img19'
 }];
 
 products = [{
-    img: '1.png',
+    img: '1.webp',
     presion: '30 - 35 mbars',
     name: 'Calefactor de pared grande',
     potence: '45.000 Btu',
@@ -42,7 +42,7 @@ products = [{
     colors: 'Negro - Blanco - Bronce',
     format: 'wideImg'
 }, {
-    img: '4.png',
+    img: '4.webp',
     presion: 'Cilindros de hasta 20 libras',
     name: 'Calefactor de pedestal',
     potence: '35.000 Btu',
@@ -51,7 +51,7 @@ products = [{
     colors: 'Negro',
     format: 'largeImg'
 }, {
-    img: '5.png',
+    img: '5.webp',
     presion: '20 - 23 mbars',
     name: 'Calefactor de pared grande',
     potence: '18.000 Btu',
@@ -60,7 +60,7 @@ products = [{
     colors: 'Negro - Blanco - Bronce',
     format: 'wideImg'
 }, {
-    img: '6.png',
+    img: '6.webp',
     presion: '20 - 23 mbars',
     name: 'Calefactor de pared mediano',
     potence: '22.000 Btu',
@@ -69,7 +69,7 @@ products = [{
     colors: 'Negro - Blanco - Bronce',
     format: 'wideImg'
 }, {
-    img: '7.png',
+    img: '7.webp',
     presion: 'Cilindros de hasta 30 libras',
     name: 'Calefactor de pedestal',
     potence: '35.000 Btu',
@@ -78,7 +78,7 @@ products = [{
     colors: 'Negro - Plata - Bronce',
     format: 'largeImg'
 }, {
-    img: '8.png',
+    img: '8.webp',
     presion: 'Cilindros de hasta 20 libras',
     name: 'Calefactor de pedestal',
     potence: '35.000 Btu',
