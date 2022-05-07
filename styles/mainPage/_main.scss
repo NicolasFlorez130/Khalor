@@ -137,27 +137,33 @@ main {
 
                         transition: .5s;
 
+                        @include tablet {
+                            font-size: 0.65rem;
+                        }
+
                         @include phone {
                             height: var(--cardSize);
+                            font-size: 0.7rem;
                             left: 0;
                             top: var(--cardSize);
                         }
 
+                        @include phoneChikito{
+                            font-size: 0.55rem;
+                        }
+
                         .presion {
                             font-size: 1.2em;
-                            margin: 5px 0;
                             font-weight: 300;
                         }
 
                         h2 {
                             font-size: 2em;
-                            margin: 5px 0;
                             font-weight: 600;
                         }
 
                         .potence {
                             font-size: 1.2em;
-                            margin: 5px 0;
                             font-weight: 600;
                         }
 
@@ -166,7 +172,27 @@ main {
                         .colors {
                             font-size: 1em;
                             font-weight: 300;
+                        }
+
+                        .presion,
+                        h2,
+                        .potence,
+                        .size,
+                        .switchType,
+                        .colors {
                             margin: 5px 0;
+
+                            @include tablet {
+                                margin: 2px 0;
+                            }
+
+                            @include phone {
+                                margin: 3px 0;
+                            }
+
+                            @include phoneChikito {
+                                margin: 2px 0;
+                            }
                         }
 
                         div,

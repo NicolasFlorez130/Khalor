@@ -34,20 +34,18 @@ backgrounds = [{
 
 products = [{
     img: '1.png',
-    presion: '30 - 35 mbars',
-    name: 'Calefactor de pared grande',
-    potence: '45.000 Btu',
-    switchType: 'Manual, termocupla, switch o control remoto',
-    size: 'Ancho: 100cms - Alto: 27cms',
-    colors: 'Negro - Blanco - Bronce',
-    format: 'wideImg'
+    name: 'Chimeneas y diseños personalizados',
+    potence: 'Presión variable',
+    switchType: 'Las chimeneas son construidas con base en las medidas que dispone el comprador y en la presión, color y caracteristicas que el requiera, pregunte por la suya.',
+    format: 'largeImg'
+
 }, {
     img: '4.png',
     presion: 'Cilindros de hasta 20 libras',
     name: 'Calefactor de pedestal',
     potence: '35.000 Btu',
     switchType: 'Manual sencillo o termocupla',
-    size: 'Ancho: - Alto: 202cms',
+    size: 'Ancho: Variable - Alto: 202cms',
     colors: 'Negro',
     format: 'largeImg'
 }, {
@@ -74,16 +72,25 @@ products = [{
     name: 'Calefactor de pedestal',
     potence: '35.000 Btu',
     switchType: 'Manual, sencillo o termocupla',
-    size: 'Ancho: - Alto: 205cms',
+    size: 'Ancho: Variable - Alto: 205cms',
     colors: 'Negro - Plata - Bronce',
     format: 'largeImg'
 }, {
     img: '8.png',
+    presion: '30 - 35 mbars',
+    name: 'Calefactor de pared grande',
+    potence: '45.000 Btu',
+    switchType: 'Manual, termocupla, switch o control remoto',
+    size: 'Ancho: 100cms - Alto: 27cms',
+    colors: 'Negro - Blanco - Bronce',
+    format: 'wideImg'
+}, {
+    img: '9.png',
     presion: 'Cilindros de hasta 20 libras',
     name: 'Calefactor de pedestal',
     potence: '35.000 Btu',
     switchType: 'Manual sencillo o termocupla',
-    size: 'Ancho: - Alto: 202cms',
+    size: 'Ancho: Variable - Alto: 202cms',
     colors: 'Negro',
     format: 'largeImg'
 }];

@@ -33,7 +33,7 @@ window.addEventListener('load', () => {
     imgs.forEach(product => {
         const div = document.createElement('div'),
             img = document.createElement('img');
-        img.src = `assets/backgrounds/${product[0]}`;
+        img.src = `${location.origin}/assets/backgrounds/${product[0]}`;
         img.alt = product[1];
         img.title = product[2];
         div.appendChild(img);

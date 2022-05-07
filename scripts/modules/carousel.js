@@ -1,5 +1,7 @@
 window.addEventListener('load', () => {
-    products.forEach(product => {
+    document.querySelector('.contact').addEventListener('click', e => document.querySelector('#freechat-icon').click());
+
+    products.forEach((product, i) => {
 
         const container = document.createElement('div'),
             img = document.createElement('img'),
@@ -15,32 +17,52 @@ window.addEventListener('load', () => {
         container.className = 'item';
 
         imgContainer.className = 'image';
-        img.src = `assets/products/${product.img}`;
+        img.src = `${location.origin}/assets/products/${product.img}`;
         img.className = product.format;
-        img.alt = 'calefactor de ambiente infrarojo Khalor en Bogotá';
-        img.title = 'Calefactor infrarrojo a gas Khalor';
 
-        details.className = 'details';
+        if (i == 0) {
+            img.title = 'Chimenea a gas Khalor';
+            img.alt = 'chimenea a gas infrarojo Khalor en Bogotá';
 
-        presion.innerText = product.presion;
-        presion.className = 'presion';
+            details.className = 'details';
 
-        name.innerHTML = product.name;
+            name.innerHTML = product.name;
 
-        potence.innerText = product.potence;
-        potence.className = 'potence';
+            potence.innerText = product.potence;
+            potence.className = 'potence';
 
-        switchType.innerText = `Tipo de encendido: ${product.switchType}`;
-        switchType.className = 'switchType';
+            switchType.innerText = product.switchType;
+            switchType.className = 'switchType';
 
-        size.innerText = `Medidas: ${product.size}`;
-        size.className = 'size';
+            imgContainer.appendChild(img);
+            details.append(name, potence, switchType);
+        } else {
+            img.title = 'Calefactor infrarrojo a gas Khalor';
+            img.alt = 'calefactor de ambiente infrarojo Khalor en Bogotá';
 
-        colors.innerText = `Colores: ${product.colors}`;
-        colors.className = 'colors';
+            details.className = 'details';
 
-        imgContainer.appendChild(img);
-        details.append(presion, name, potence, switchType, size, colors);
+            presion.innerText = product.presion;
+            presion.className = 'presion';
+
+            name.innerHTML = product.name;
+
+            potence.innerText = product.potence;
+            potence.className = 'potence';
+
+            switchType.innerText = `Tipo de encendido: ${product.switchType}`;
+            switchType.className = 'switchType';
+
+            size.innerText = `Medidas: ${product.size}`;
+            size.className = 'size';
+
+            colors.innerText = `Colores: ${product.colors}`;
+            colors.className = 'colors';
+
+            imgContainer.appendChild(img);
+            details.append(presion, name, potence, switchType, size, colors);
+        }
+
         container.append(imgContainer, details);
 
         document.querySelector('#corouselContainer').appendChild(container);

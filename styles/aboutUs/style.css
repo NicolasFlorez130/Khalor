@@ -43,91 +43,32 @@ a {
   color: #edf2f4;
 }
 
-body .loadScreen {
+.freechat-popup-credit {
+  display: none !important;
+}
+
+.loadScreen {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0F1217;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: fixed;
-  top: 0;
-  background-color: #0F1217;
-  width: 100vw;
   height: 100vh;
-  z-index: 99999999;
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
-}
-
-body .loadScreen img {
-  height: 7rem;
-}
-
-body .loadScreen span {
-  color: #edf2f4;
-  font-family: 'Pridi', serif;
-  cursor: context-menu;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body .loadScreen span::-moz-selection,
-body .loadScreen span span::-moz-selection {
-  background-color: rgba(0, 0, 0, 0);
-}
-
-body .loadScreen span::selection,
-body .loadScreen span span::selection {
-  background-color: rgba(0, 0, 0, 0);
-}
-
-body .loadScreen span .title {
-  font-size: 2rem;
-}
-
-body .loadScreen span .title .p {
-  height: 100%;
-  color: #ef233c;
-  font-size: 3rem;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-body .loadScreen span .title .pDark {
-  color: #edf2f4;
-}
-
-body .loadScreen span .title {
-  font-size: 3.8rem;
-}
-
-body .loadScreen span .title .p {
-  font-size: 5rem;
-}
-
-body .loadScreen .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-body .loadScreen p {
-  color: #edf2f4;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  -webkit-transition: 1s;
+  transition: 1s;
+  z-index: 99999999;
 }
 
 header span {

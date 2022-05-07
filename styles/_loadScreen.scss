@@ -1,48 +1,15 @@
-body {
+.loadScreen {
+    align-items: center;
+    background-color: $loadScreenColor;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
 
-    .loadScreen {
+    transition: 1s;
+    z-index: 99999999;
 
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-
-        position: fixed;
-        top: 0;
-        background-color: $loadScreenColor;
-        width: 100vw;
-        height: 100vh;
-
-        z-index: 99999999;
-
-        transition: 1.5s;
-
-        img {
-            height: 7rem
-        }
-
-        span {
-            @include logo;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .title {
-                font-size: 3.8rem;
-
-                .p {
-                    font-size: 5rem;
-                }
-            }
-        }
-
-        .logo {
-            display: flex;
-        }
-
-        p {
-            color: $fourthColor;
-        }
-
-    }
 }
