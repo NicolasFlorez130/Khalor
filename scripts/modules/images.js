@@ -20,11 +20,11 @@
          items = [];
 
      for (let i = 1; i <= calefactCuant; i++) {
-         imgs.push([`calefactor (${i}).jpg`, 'calefactor de ambiente infrarojo Khalor en Bogotá', 'Calefactor infrarrojo Khalor']);
+         imgs.push([`calefactor (${i}).webp`, 'calefactor de ambiente infrarojo Khalor en Bogotá', 'Calefactor infrarrojo Khalor']);
      }
 
      for (let i = 1; i <= chimCuant; i++) {
-         imgs.push([`chimenea (${i}).jpg`, 'chimenea a gas Khalor en Bogotá', 'Chimenea a gas Khalor']);
+         imgs.push([`chimenea (${i}).webp`, 'chimenea a gas Khalor en Bogotá', 'Chimenea a gas Khalor']);
      }
 
      imgs = imgs.sort((a, b) => 0.5 - Math.random())

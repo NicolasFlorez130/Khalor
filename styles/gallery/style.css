@@ -281,11 +281,11 @@ header .phoneNavBar {
   margin-top: 2vw;
   text-align: center;
 }
-.expandedImage .showed {
+.expandedImage .visible {
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
 }
-.expandedImage .showed img {
+.expandedImage .visible img {
   transform: scale(1);
 }
 

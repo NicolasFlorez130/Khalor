@@ -1,3 +1,5 @@
 *.scss
 
-/.vscode
+.vscode/
+
+png/
