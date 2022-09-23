@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
     let count = 0,
         bg = backg[0].img;
 
-    const counter = document.querySelector('#imageShowed');
+    const counter = document.querySelector('#imagevisible');
 
     let dots = document.querySelectorAll('.dot');
 

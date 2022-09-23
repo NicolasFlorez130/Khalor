@@ -1,5 +1,5 @@
-window.addEventListener('load', () => {
-    cards.forEach(product => {
+window.addEventListener('load', async function () {
+    await cards.forEach(product => {
         const card = document.createElement('div'),
             container = document.createElement('div'),
             img = document.createElement('div'),
@@ -22,4 +22,6 @@ window.addEventListener('load', () => {
 
         document.querySelector('#cardsContainer').appendChild(card)
     });
+
+    hideLoader();
 })

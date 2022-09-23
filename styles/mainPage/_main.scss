@@ -211,7 +211,7 @@ main {
                     }
                 }
 
-                .showed {
+                .visible {
                     width: calc(var(--cardSize) * 2);
 
                     @include phone {
@@ -257,11 +257,11 @@ main {
             }
 
             .secondSpan {
-                color: #b3b3b3;
+                color: $secColor;
                 font-weight: 300;
             }
 
-            a {
+            .moreAboutUs {
                 color: $mainColor;
                 display: block;
                 margin-top: 40px;

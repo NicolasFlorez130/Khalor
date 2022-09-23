@@ -33,14 +33,14 @@ backgrounds = [{
 }];
 
 products = [{
-    img: '1.png',
+    img: '1.webp',
     name: 'Chimeneas y diseños personalizados',
     potence: 'Presión variable',
     switchType: 'Las chimeneas son construidas con base en las medidas que dispone el comprador y en la presión, color y caracteristicas que el requiera, pregunte por la suya.',
     format: 'largeImg'
 
 }, {
-    img: '4.png',
+    img: '4.webp',
     presion: 'Cilindros de hasta 20 libras',
     name: 'Calefactor de pedestal',
     potence: '35.000 Btu',
@@ -49,7 +49,7 @@ products = [{
     colors: 'Negro',
     format: 'largeImg'
 }, {
-    img: '5.png',
+    img: '5.webp',
     presion: '20 - 23 mbars',
     name: 'Calefactor de pared grande',
     potence: '18.000 Btu',
@@ -58,7 +58,7 @@ products = [{
     colors: 'Negro - Blanco - Bronce',
     format: 'wideImg'
 }, {
-    img: '6.png',
+    img: '6.webp',
     presion: '20 - 23 mbars',
     name: 'Calefactor de pared mediano',
     potence: '22.000 Btu',
@@ -67,7 +67,7 @@ products = [{
     colors: 'Negro - Blanco - Bronce',
     format: 'wideImg'
 }, {
-    img: '7.png',
+    img: '7.webp',
     presion: 'Cilindros de hasta 30 libras',
     name: 'Calefactor de pedestal',
     potence: '35.000 Btu',
@@ -76,7 +76,7 @@ products = [{
     colors: 'Negro - Plata - Bronce',
     format: 'largeImg'
 }, {
-    img: '8.png',
+    img: '8.webp',
     presion: '30 - 35 mbars',
     name: 'Calefactor de pared grande',
     potence: '45.000 Btu',
@@ -85,7 +85,7 @@ products = [{
     colors: 'Negro - Blanco - Bronce',
     format: 'wideImg'
 }, {
-    img: '9.png',
+    img: '9.webp',
     presion: 'Cilindros de hasta 20 libras',
     name: 'Calefactor de pedestal',
     potence: '35.000 Btu',

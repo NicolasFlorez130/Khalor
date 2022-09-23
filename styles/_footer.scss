@@ -1,98 +1,95 @@
 footer {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    overflow-x: hidden;
+   background-color: black;
+   display: flex;
+   justify-content: center;
+   overflow-x: hidden;
 
-    .container {
-        display: flex;
-        font-size: .8rem;
-        margin: 150px 30px;
-        width: 100%;
+   .container {
+      display: flex;
+      font-size: .8rem;
+      margin: 150px 30px;
+      width: 100%;
 
-        max-width: $maxWidth;
+      max-width: $maxWidth;
 
-        @include tablet {
+      @include tablet {
+         align-items: center;
+         flex-direction: column;
+         margin: 30px 0;
+      }
+
+      .firstSection {
+         align-items: center;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         width: 100%;
+
+         @include tablet {
             align-items: center;
-            flex-direction: column;
-            margin: 30px 0;
-        }
+         }
 
-        .firstSection {
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 100%;
+         span {
+
+            @include logo;
 
             @include tablet {
-                align-items: center;
+               margin-top: .2rem;
             }
+         }
+      }
 
-            span {
+      .secSection {
+         color: white;
+         display: flex;
+         justify-content: center;
 
-                @include logo;
+         .links {
 
-                @include tablet {
-                    margin-top: .2rem;
-                }
-            }
-        }
-
-        .secSection {
-            color: white;
-            display: flex;
             justify-content: center;
+            flex-wrap: wrap;
+            display: flex;
+            width: 600px;
 
-            .links {
-
-                justify-content: center;
-
-                @include phone {
-                    display: none;
-                }
-
-                flex-wrap: wrap;
-                display: flex;
-                width: 600px;
-
-                @include tablet {
-                    justify-content: center;
-                    margin-top: 30px;
-                }
-
-                div {
-                    padding-right: 50px;
-                }
-
-                a {
-                    display: block;
-                    line-height: 2.2rem;
-                }
-
-                .socials {
-                    align-items: center;
-                    justify-content: space-evenly;
-                    display: flex;
-                    width: 80px;
-                }
+            @include tablet {
+               justify-content: center;
+               margin-top: 30px;
             }
 
-
-            .socials2 {
-                align-items: center;
-                justify-content: space-evenly;
-                display: none;
-                width: 80px;
-
-                justify-content: space-evenly;
-
-                @include phone {
-                    margin-top: 10px;
-                    display: flex;
-                }
+            @include phone {
+               padding: 0 3rem;
             }
-        }
 
-    }
+            div {
+               padding-right: 50px;
+            }
+
+            a {
+               align-items: center;
+               display: flex;
+               gap: .2rem;
+               line-height: 2.2rem;
+            }
+
+            .socials {
+               align-items: center;
+               gap: 1rem;
+               justify-content: space-evenly;
+               display: flex;
+               width: 80px;
+
+               @include phone {
+                  align-items: center;
+                  justify-content: space-evenly;
+                  width: 80px;
+
+                  flex-direction: column;
+                  margin-top: 10px;
+                  display: flex;
+               }
+            }
+         }
+      }
+   }
+
 }
